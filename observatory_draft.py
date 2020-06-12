@@ -321,23 +321,24 @@ class LargeView(arcade.View):
         self.window.show_view(game_view)
 
 class ObservatoryView(arcade.View):
-    class LargeView(arcade.View):
-        def on_show(self):
-            self.observatory_back = arcade.load_texture("images/observatory_back.png")
 
-        def on_draw(self):
-            """ Draw this view """
-            arcade.start_render()
+    def on_show(self):
+        self.observatory_back = arcade.load_texture("images/observatory_back.png")
 
-            arcade.draw_lrwh_rectangle_textured(0, 0,
-                                                SCREEN_WIDTH, SCREEN_HEIGHT,
-                                                self.observatory_back)
+    def on_draw(self):
+        """ Draw this view """
+        arcade.start_render()
 
-        def on_mouse_press(self, _x, _y, _button, _modifiers):
-            """ If the user presses the mouse button, start the game. """
-            game_view = MainGame()
-            game_view.setup()
-            self.window.show_view(game_view)
+        arcade.draw_lrwh_rectangle_textured(0, 0,
+                                            SCREEN_WIDTH, SCREEN_HEIGHT,
+                                            self.observatory_back)
+
+    def on_mouse_press(self, _x, _y, _button, _modifiers):
+        """ If the user presses the mouse button, start the game. """
+        game_view = MainGame()
+        game_view.setup()
+        self.window.show_view(game_view)
+
 
 
 def main():
