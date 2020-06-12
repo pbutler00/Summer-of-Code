@@ -1,3 +1,9 @@
+## Questions! 
+1. I need help with the sound. It plays way too loud and sounds very distorted!
+2. I am working on game logic, but could use some guidance on making my telescope sprites actionable (change the game view on click)
+3. I need help displaying a window of text for the "objects discovered" button. If possible, I don't want to have to deal with changing the view. 
+
+
 # Summer-of-Code
 Projects and Files from Summer of Code Internship with the Hamilton CS Department
 
